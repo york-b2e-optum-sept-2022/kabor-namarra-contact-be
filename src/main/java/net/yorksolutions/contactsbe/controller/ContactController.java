@@ -26,4 +26,9 @@ public class ContactController {
         return this.contactService.getContacts(accountId);
     }
 
+    @DeleteMapping
+    public void deleteContact(@RequestParam Long contactId){
+        this.contactService.deleteContact(contactId);
+    }
+
 }

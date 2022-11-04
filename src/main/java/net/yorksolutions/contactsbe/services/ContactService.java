@@ -41,5 +41,9 @@ public class ContactService {
         return this.contactRepository.findAllByOwner(accountOpt.get());
     }
 
+    public void deleteContact(Long contactId){
+        this.contactRepository.deleteById(contactId);
+    }
+
 
 }
